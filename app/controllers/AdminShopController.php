@@ -11,7 +11,7 @@ class AdminShopController extends Controller
 
     public function index()
     {
-        $session = new Session();
+        $session = new AdminSession();
 
         if ($session->getLogin()) {
             $data = [
@@ -25,5 +25,12 @@ class AdminShopController extends Controller
             header('LOCATION:' . ROOT . 'admin');
         }
 
+    }
+
+    public function logout()
+    {
+        $session = new AdminSession();
+        $session->logout();
+        header('location:' . ROOT . 'admin');
     }
 }

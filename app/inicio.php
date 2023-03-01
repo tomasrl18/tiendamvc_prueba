@@ -13,5 +13,6 @@ define('ENCRIPTKEY', 'elperrodesanroque');
 require_once('libs/Mysqldb.php');
 require_once('libs/Controller.php');
 require_once('libs/Application.php');
+require_once ('libs/AdminSession.php');
 require_once ('libs/Session.php');
 require_once('libs/Validate.php');
